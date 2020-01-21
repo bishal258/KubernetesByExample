@@ -1,0 +1,5 @@
+image: cheruvu007/k8s-demo:version2
+port: 8000
+servicetype: LoadBalancer
+replicas: 2
+name: currency-exchange

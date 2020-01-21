@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: helloworld-controller2
+spec:
+  replicas: 3
+  selector:
+    app: helloworld
+  template:
+    metadata:
+      labels:
+        app: helloworld
+    spec:
+      containers:
+      - name: k8s-demo
+        image: cheruvu007/k8s-demo:version1
+        ports:
+        - name: nodejs-port
+          containerPort: 3000
